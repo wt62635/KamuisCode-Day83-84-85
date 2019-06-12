@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+    version="2.1">
+    
+  <tlib-version>1.1</tlib-version>
+  <short-name>c1</short-name>
+  <uri>http://tedu.cn/tag</uri>
+  
+  <tag>
+    <name>hello</name>
+    <tag-class>tag.HelloTag</tag-class>
+    <!-- 
+    	body-content用来告诉容器，标签有无标签体，
+    	如果有标签体，内容是什么。
+    	empty : 该标签没有标签体。
+    	scriptless:该标签有标签体，但是，标签体里面
+    		不能够出现java代码(<% %>,
+    		<%= %>,<%! %>)。
+    	JSP:该标签有标签体,并且标签体里面可以出现
+    		java代码。注意，只有复杂标签技术才支持
+    		该值，简单标签技术只支持empty和scriptless。
+     -->
+    <body-content>empty</body-content>
+    <attribute>
+        <name>info</name>
+        <!-- 
+        	 如果值为true,表示该属性必选，
+        	 如果值为false,表示该属性可选。 
+         -->
+        <required>true</required>
+        <!--
+        	如果值为true,表示该属性可以动态
+        	赋值(比如可以使用el表达式来赋值)。 
+         -->
+        <rtexprvalue>false</rtexprvalue>
+    </attribute>
+    <attribute>
+    	<name>qty</name>
+    	<required>true</required>
+    	<rtexprvalue>true</rtexprvalue>
+    </attribute>
+    
+    
+    
+  </tag>  
+    
+</taglib>
